@@ -1,0 +1,158 @@
+.app-shell {
+  width: min(960px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 40px 0 64px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 650;
+}
+
+.brand-mark {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--brand);
+  color: white;
+  font-size: 16px;
+}
+
+.welcome {
+  padding: 88px 0 40px;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  color: var(--brand);
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+}
+
+h1 {
+  max-width: 680px;
+  margin: 0;
+  font-size: clamp(32px, 6vw, 48px);
+  line-height: 1.25;
+  letter-spacing: -0.035em;
+}
+
+.intro {
+  max-width: 600px;
+  margin: 20px 0 0;
+  color: var(--text-secondary);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.health-card {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: 0 4px 18px rgb(23 32 51 / 4%);
+}
+
+.status-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--warning);
+}
+
+.ready .status-dot {
+  background: var(--success);
+}
+
+.unavailable .status-dot {
+  background: var(--error);
+}
+
+h2 {
+  margin: 20px 0 8px;
+  font-size: 22px;
+}
+
+.health-card p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.health-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+code {
+  color: var(--text-secondary);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+button {
+  min-height: 44px;
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 7px;
+  background: var(--brand);
+  color: white;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: var(--brand-hover);
+}
+
+button:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+@media (max-width: 600px) {
+  .app-shell {
+    width: min(100% - 32px, 960px);
+    padding-top: 24px;
+  }
+
+  .welcome {
+    padding-top: 56px;
+  }
+
+  .health-card {
+    padding: 20px;
+  }
+
+  .health-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
