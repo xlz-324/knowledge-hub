@@ -61,13 +61,9 @@ pnpm format:check # 检查格式，不修改文件
 
 ## 配置
 
-本地需要自定义配置时：
+当前 API 从进程环境读取 `NODE_ENV` 和 `API_PORT` 并在启动时校验；本地默认值分别为 `development` 和 `3000`。
 
-```bash
-cp .env.example .env
-```
-
-`.env` 被 Git 忽略，不提交真实密钥。当前 API 从进程环境读取 `NODE_ENV` 和 `API_PORT` 并在启动时校验；本地默认值分别为 `development` 和 `3000`。
+**当前启动程序尚未加载 `.env` 文件。**`.env.example` 仅用于展示可用变量，暂不需要复制。后续接入配置加载机制后再补充复制步骤；`.env` 已被 Git 忽略，真实密钥不得提交。
 
 ```bash
 API_PORT=3100 pnpm dev:api
